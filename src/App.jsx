@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { supabase } from './lib/supabase';
 import {
   CheckCircle2,
   ChevronRight,
@@ -155,14 +156,40 @@ export default function App() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
-      const response = await fetch('https://n8n.example.com/webhook/agence-candidature', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const { error } = await supabase
+        .from('recrutement_agence')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          city: formData.city,
+          is_adult: formData.isAdult,
+          roles: formData.roles,
+          attraction: formData.attraction,
+          motivation: formData.motivation,
+          closing_exp: formData.closingExp,
+          closing_exp_desc: formData.closingExpDesc,
+          sales_exp: formData.salesExp,
+          ai_level: formData.aiLevel,
+          status: formData.status,
+          micro_entreprise: formData.microEntreprise,
+          hours_per_week: formData.hoursPerWeek,
+          availability: formData.availability,
+          preferred_time: formData.preferredTime,
+          has_computer: formData.hasComputer,
+          has_phone: formData.hasPhone,
+          has_internet: formData.hasInternet,
+          source: formData.source,
+          additional_info: formData.additionalInfo,
+        });
+
+      if (error) throw error;
+
       setIsSubmitting(false);
       setSubmitStatus('success');
     } catch (error) {
+      console.error('Erreur submission:', error);
       setIsSubmitting(false);
       setSubmitStatus('error');
     }
