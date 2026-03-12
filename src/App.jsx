@@ -328,13 +328,13 @@ export default function App() {
         <section className="min-h-[90vh] flex flex-col justify-center pt-20">
           <RevealSection>
             <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-accent font-semibold text-sm mb-6 shadow-sm border border-blue-200">
-              Lancement dans ~2 semaines
+              Lancement dans ~1 mois
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-primary">
               Rejoins la <span className="text-accent">première agence</span> de closers & setters propulsée à l'IA
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl leading-relaxed">
-              On lance une agence de closing et de setting, propulsée à l'IA. Pas juste une agence qui "utilise" l'IA — une agence où <strong className="text-primary">l'IA est partout dans le process</strong>. On cherche des personnes déterminées, pas forcément expertes. L'IA fait le gros du travail — toi, tu fais la différence.
+              On lance une aventure collective : une agence de closing et de setting, propulsée à l'IA. Personne ici n'est né expert — <strong className="text-primary">on apprend tous ensemble, chacun à son rythme</strong>. L'IA fait le gros du travail, toi tu progresses et tu deviens performant. L'objectif ? Que tout le monde monte en compétences et qu'on soit tous hyper efficaces.
             </p>
             <p className="text-base text-gray-500 mb-10 max-w-3xl leading-relaxed">
               Ce formulaire c'est une <strong>pré-candidature</strong> pour voir qui est chaud. Ça prend 3 minutes et ça ne t'engage à rien.
@@ -378,7 +378,7 @@ export default function App() {
                 J'ai fait toute la partie "aide au closing" — le logiciel, la formation, la config IA — et maintenant c'est les plus déterminés qui feront le plus d'argent. <strong className="text-primary">Je ne garantis pas que ça marchera</strong>, mais j'ai essayé de donner le maximum de cartes pour que ça marche.
               </p>
               <p className="text-primary font-semibold">
-                On est tous dans le même bateau. C'est ceux qui croient en cette aventure et dans cette manière de travailler qui seront les plus récompensés.
+                On est tous dans le même bateau — personne ne prétend tout savoir. C'est une aventure où chacun avance à son rythme, et ceux qui s'investissent vraiment seront les plus récompensés.
               </p>
             </div>
           </RevealSection>
@@ -467,6 +467,58 @@ export default function App() {
                     On est en train de structurer des offres d'upsell pour augmenter le panier moyen : un <strong>abonnement mensuel</strong> où le client peut avoir des articles de blog qui se rédigent et se publient automatiquement sur son site, des recommandations SEO tous les mois dans sa boîte mail, etc. L'idée c'est que ça génère du <strong>récurrent pour tout le monde</strong>.
                   </p>
                 </div>
+              </div>
+            </div>
+          </RevealSection>
+        </section>
+
+        {/* ==================== LA VISION ==================== */}
+        <section className="py-24">
+          <RevealSection>
+            <div className="bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 text-white rounded-[3rem] p-10 md:p-16 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+
+              <div className="relative z-10">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/90 font-semibold text-sm mb-6 border border-white/20">
+                  Notre vision long terme
+                </div>
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                  Aujourd'hui les conciergeries.<br/>
+                  <span className="text-cyan-200">Demain, tous les marchés.</span>
+                </h2>
+
+                <div className="space-y-6 text-lg md:text-xl text-blue-50/90 font-light leading-relaxed max-w-3xl">
+                  <p>
+                    On a développé en interne une <strong className="text-white font-bold">solution IA de malade</strong> — une config qui nous permet d'aller <strong className="text-white font-bold">10x plus vite que n'importe quelle agence classique</strong>. Les sites vitrines pour conciergeries, c'est juste le point de départ.
+                  </p>
+                  <p>
+                    La vision, c'est de <strong className="text-white font-bold">couvrir tous les marchés à terme</strong> : restaurants, artisans, coachs, e-commerce, immobilier... Chaque secteur qu'on ouvre, c'est une nouvelle source de revenus pour toute l'équipe.
+                  </p>
+                  <p>
+                    Et le plus beau : pour chaque client, on ne vend pas juste un site. On leur offre aussi <strong className="text-white font-bold">des solutions IA qu'on utilise nous-mêmes</strong> — gestion des réseaux sociaux automatisée, génération de contenu, SEO automatique, emails marketing... Tout ça <strong className="text-white font-bold">inclus dans les packs</strong>. Ça rend notre offre imbattable et ça fidélise les clients.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+                  {[
+                    { icon: <Rocket size={22} />, title: "Config IA propriétaire", desc: "Notre avantage compétitif : une vitesse de livraison que personne ne peut matcher" },
+                    { icon: <Globe size={22} />, title: "Multi-marchés", desc: "Conciergeries aujourd'hui, tous les secteurs demain — on scale ensemble" },
+                    { icon: <Star size={22} />, title: "Solutions IA offertes", desc: "Réseaux sociaux auto, SEO, contenu — inclus dans chaque pack client" },
+                  ].map((item, i) => (
+                    <div key={i} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                      <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-4 text-cyan-200">
+                        {item.icon}
+                      </div>
+                      <h4 className="font-bold text-white mb-2">{item.title}</h4>
+                      <p className="text-blue-100/80 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-10 text-lg text-cyan-100 font-semibold">
+                  On est tous au même niveau, on part tous de zéro ensemble. La différence, c'est qu'on a les outils pour aller plus loin, plus vite que les autres. Et ceux qui montent dans le train maintenant seront les mieux placés quand on ouvrira les prochains marchés.
+                </p>
               </div>
             </div>
           </RevealSection>
@@ -569,7 +621,7 @@ export default function App() {
             </ul>
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-orange-100 border-l-4 border-l-orange-400">
               <p className="text-gray-700 font-medium leading-relaxed">
-                <strong className="text-primary">Pas besoin d'être expert en IA.</strong> On prend volontairement des personnes qui n'y connaissent pas forcément grand-chose. L'objectif c'est que tout le monde se forme, que tout le monde monte en compétences. Si ça marche bien, il y aura des possibilités d'évolution.
+                <strong className="text-primary">Pas besoin d'être expert.</strong> On ne cherche pas des profils parfaits — on cherche des gens motivés. L'idée c'est que chacun évolue à son rythme, qu'on se forme ensemble, et qu'on devienne tous hyper performants. C'est une aventure, pas un examen d'entrée. Si ça marche bien, il y aura des possibilités d'évolution.
               </p>
             </div>
           </RevealSection>
@@ -606,11 +658,11 @@ export default function App() {
 
               <div className="space-y-6 text-lg md:text-xl text-blue-50/90 relative z-10 font-light leading-relaxed max-w-3xl">
                 <p>On est deux fondateurs avec nos business à côté. On ne sera pas sur ton dos H24, donc on cherche des gens <strong className="text-white font-bold">autonomes et déterminés</strong>.</p>
-                <p>Je ne te garantis pas que tout sera parfait au jour 1. Mais je te garantis que j'ai mis en place l'écosystème IA le plus puissant possible pour qu'on réussisse <strong className="text-white font-bold">ensemble</strong>.</p>
-                <p>On est tous dans le même bateau. <strong className="text-white font-bold">Ceux qui s'investissent et qui croient en cette aventure seront les plus récompensés.</strong></p>
+                <p>Je ne te garantis pas que tout sera parfait au jour 1. Personne n'est expert, et c'est justement ça qui est excitant — <strong className="text-white font-bold">on construit ça ensemble, en apprenant au fur et à mesure</strong>.</p>
+                <p>Chacun avance à son rythme, mais l'objectif est le même : <strong className="text-white font-bold">devenir hyper performant</strong>. Ceux qui s'investissent et qui croient en cette aventure seront les plus récompensés.</p>
                 <div className="flex items-center gap-3 mt-10 bg-white/10 p-5 rounded-2xl border border-white/10">
                   <Clock className="w-8 h-8 text-blue-300 flex-shrink-0" />
-                  <p className="font-semibold text-blue-200 text-xl">Lancement prévu d'ici environ 2 semaines / 1 mois.</p>
+                  <p className="font-semibold text-blue-200 text-xl">Lancement prévu d'ici environ 1 mois.</p>
                 </div>
               </div>
             </div>
